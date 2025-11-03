@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-i      pdfUrl: getAssetPath("/pdfs/lunar-launch-vehicle.pdf"),port { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { FaRocket, FaFlask, FaCar, FaFilePdf, FaExpandAlt } from 'react-icons/fa';
 import { HiChip } from 'react-icons/hi';
 import { RiCodeSSlashFill } from 'react-icons/ri';
@@ -22,15 +22,15 @@ export default function Projects() {
   const graduateResearch: Project[] = [
     {
       title: "TorqMag: Novel Magnetic Attitude Control Integration (2nd Place, SmallSat Conference)",
-      coverImage: "/images/projects/torquemag-cover.jpg",
+      coverImage: getAssetPath("/images/projects/torquemag-cover.jpg"),
       description: "Developed innovative dual-purpose magnetic torque rods that function as both attitude control actuators and AC magnetometry sensors. The system features μ-metal components and custom electronics for seamless mode-switching between control and sensing operations.",
       technologies: ["Magnetometry", "Control Systems", "Hardware Design", "Signal Processing"],
       icon: HiChip,
-      pdfUrl: "/pdfs/torquemag-paper.pdf"
+      pdfUrl: getAssetPath("/pdfs/torquemag-paper.pdf")
     },
     {
       title: "PCAC Data-Driven Autopilot System",
-      coverImage: "/images/projects/pcac-cover.jpg",
+      coverImage: getAssetPath("/images/projects/pcac-cover.jpg"),
       description: "Implemented and validated a novel Predictive Cost Adaptive Control (PCAC) system for F16 and tailless aircraft, enabling robust flight control without relying on prior modeling or training. The system demonstrated exceptional performance in handling unpredictable flight dynamics through extensive simulation testing.",
       technologies: ["Adaptive Control", "Flight Dynamics", "System Identification", "Python/C/MATLAB"],
       icon: RiCodeSSlashFill
