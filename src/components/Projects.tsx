@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+i      pdfUrl: getAssetPath("/pdfs/lunar-launch-vehicle.pdf"),port { motion, AnimatePresence } from 'framer-motion';
 import { FaRocket, FaFlask, FaCar, FaFilePdf, FaExpandAlt } from 'react-icons/fa';
 import { HiChip } from 'react-icons/hi';
 import { RiCodeSSlashFill } from 'react-icons/ri';
@@ -40,14 +40,14 @@ export default function Projects() {
   const projectWork: Project[] = [
     {
       title: "President of UGA Motorsports and Powertrain Design Team Lead",
-      coverImage: "/images/projects/motorsports-cover.jpg",
+      coverImage: getAssetPath("/images/projects/motorsports-cover.jpg"),
       description: "Led a team of 50+ engineering students as President of the Formula SAE competition team, managing all aspects from design and manufacturing to competition. Spearheaded the powertrain development, including custom intake and exhaust manifolds, while maintaining relationships with industry partners.",
       technologies: ["Team Leadership", "Powertrain Design", "CAD/CAM", "Project Management", "Performance Testing"],
       icon: FaCar
     },
     {
       title: "Multi-Stage Launch Vehicle Design and Optimization",
-      coverImage: "/images/projects/launch-vehicle-cover.jpg",
+      coverImage: getAssetPath("/images/projects/launch-vehicle-cover.jpg"),
       description: "Designed and optimized a three-stage lunar launch vehicle using LOX/CH₄ for lower stages and LOX/LH₂ for the upper stage. The final design achieved a 98m height and 1.2M kg mass configuration through comprehensive NASA CEA analysis.",
       technologies: ["Propulsion Systems", "NASA CEA", "Combustion Analysis", "Nozzle Design", "System Integration"],
       icon: FaRocket,
@@ -55,18 +55,18 @@ export default function Projects() {
     },
     {
       title: "Conceptual Lunar PNT Architecture with Northrop Grumman Space Systems (SciTech 2026 Accepted)",
-      coverImage: "/images/projects/pnt-cover.jpg",
+      coverImage: getAssetPath("/images/projects/pnt-cover.jpg"),
       description: "Developed a comprehensive Position, Navigation, and Timing (PNT) architecture for lunar and cis-lunar operations that achieves sub-meter accuracy and continuous South Pole coverage. Designed as a single-launch solution to minimize mission complexity while maintaining robust performance.",
       technologies: ["Orbital Mechanics", "Navigation Systems", "Space Systems Engineering", "STK Modeling"],
       icon: FaRocket
     },
     {
       title: "CFD Analysis of Turbulence Models in Propulsion Nozzles",
-      coverImage: "/images/projects/cfd-cover.jpg",
+      coverImage: getAssetPath("/images/projects/cfd-cover.jpg"),
       description: "Conducted comprehensive analysis of k–ε, k–ω, and k–ω SST turbulence models against NASA DNS data for converging-diverging nozzle flows. Through systematic validation studies, developed best practices for turbulence modeling in propulsion applications.",
       technologies: ["ANSYS CFX", "Turbulence Modeling", "Computational Fluid Dynamics", "Flow Analysis", "DNS Validation"],
       icon: HiChip,
-      pdfUrl: "/pdfs/turbulence-models-cfd.pdf"
+            pdfUrl: getAssetPath("/pdfs/turbulence-models-cfd.pdf")
     }
   ];
 
