@@ -63,7 +63,7 @@ export default function Hero() {
           >
             <div className="w-full h-full overflow-hidden rounded-lg border-2 border-accent/20">
               <img
-                src="/images/hero/engineering-symbol.jpg"
+                src="/Portfolio/images/hero/engineering-symbol.jpg"
                 alt="Engineering Symbol"
                 className="w-full h-full object-cover"
               />
@@ -79,7 +79,7 @@ export default function Hero() {
               Aerospace & Mechanical Engineering Professional
             </h2>
             <motion.a
-              href="/pdfs/resume.pdf"
+              href="/Portfolio/pdfs/resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-accent/20 bg-accent/10 text-accent hover:bg-accent/20 transition-all transform hover:scale-105"
@@ -100,7 +100,7 @@ export default function Hero() {
           >
             <div className="w-full h-full overflow-hidden rounded-lg border-2 border-accent/20">
               <img
-                src="/images/hero/aerospace-symbol.jpg"
+                src="/Portfolio/images/hero/aerospace-symbol.jpg"
                 alt="Aerospace Symbol"
                 className="w-full h-full object-cover"
               />
