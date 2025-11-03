@@ -1,0 +1,120 @@
+'use client';
+
+import { motion } from 'framer-motion';
+import { useState } from 'react';
+import { BsBriefcaseFill } from 'react-icons/bs';
+import { HiChevronRight } from 'react-icons/hi';
+
+interface ExperienceItemProps {
+  title: string;
+  company: string;
+  location: string;
+  period: string;
+  description: string;
+}
+
+function ExperienceItem({ title, company, location, period, description }: ExperienceItemProps) {
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5 }}
+      onClick={() => setIsExpanded(!isExpanded)}
+      className="bg-secondary/80 backdrop-blur-sm p-6 rounded-lg mb-4 border border-gray-700/50 relative group cursor-pointer"
+    >
+      <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-purple-600/10 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+      <div className="relative z-10">
+        <div className="flex items-center justify-between">
+          <h3 className="text-xl font-semibold flex items-center gap-2">
+            {title}
+          </h3>
+          <motion.div
+            animate={{ rotate: isExpanded ? 90 : 0 }}
+            transition={{ duration: 0.2 }}
+          >
+            <HiChevronRight className="text-accent text-xl" />
+          </motion.div>
+        </div>
+        <p className="text-accent">{company}</p>
+        <p className="text-gray-400">{location}</p>
+        <p className="text-gray-400">{period}</p>
+        
+        <motion.div
+          initial={false}
+          animate={{
+            height: isExpanded ? "auto" : 0,
+            opacity: isExpanded ? 1 : 0,
+            marginTop: isExpanded ? 16 : 0
+          }}
+          transition={{
+            duration: 0.3,
+            ease: "easeInOut"
+          }}
+          className="overflow-hidden"
+        >
+          <motion.p
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="text-gray-300 leading-relaxed"
+          >
+            {description}
+          </motion.p>
+        </motion.div>
+      </div>
+    </motion.div>
+  );
+}
+
+export default function Experience() {
+  const experiences = [
+    {
+      title: "Co-Founder, Director of Engineering",
+      company: "Washtenaw Precision Engineering",
+      location: "Ann Arbor, Michigan",
+      period: "March 2024-Present",
+      description: "Co-founded and rapidly grew an advanced defense systems company, leading international negotiations with government organizations and investors. Spearheaded the engineering development of sophisticated anti-air and undersea warfare systems, while managing the company's growth from concept to production-ready designs."
+    },
+    {
+      title: "Graduate Student Instructor",
+      company: "University of Michigan",
+      location: "Ann Arbor, Michigan",
+      period: "January 2024-Present",
+      description: "Served as the lead instructor for undergraduate Dynamics and Vibrations laboratory sessions, managing coursework and providing guidance to over 120 engineering students. Created comprehensive learning materials and offered personalized tutoring to ensure student success."
+    },
+    {
+      title: "Research Assistant - Bernstein Controls Lab",
+      company: "University of Michigan",
+      location: "Ann Arbor, Michigan",
+      period: "September 2023-Present",
+      description: "Conducted research on advanced control systems and developed optimal control algorithms for spacecraft attitude determination. Implemented and tested novel control strategies using MATLAB/Simulink while collaborating on multiple aerospace research projects."
+    },
+    {
+      title: "Graduate Assistant in Research - MagLab",
+      company: "University of Michigan",
+      location: "Ann Arbor, MI",
+      period: "May 2024-Present",
+      description: "Designed and tested μ-metal torque rod assemblies and three-axis search-coil magnetometer sensors for spacecraft applications. Engineered innovative switch circuitry enabling dual-mode operation between attitude control and AC sensing."
+    },
+    {
+      title: "Mechanical Design and Analysis Engineer",
+      company: "MAHLE Powertrain",
+      location: "Plymouth, Michigan",
+      period: "June 2021-Jan. 2024",
+      description: "Led cross-disciplinary research between EV and ICE systems, focusing on optimized electrical powertrain systems with efficient cooling solutions. Spearheaded the design and integration of prechamber systems using advanced CFD simulations and various CAD tools."
+    }
+  ];
+
+  return (
+    <section className="py-16" id="experience">
+      <h2 className="text-3xl font-bold mb-8">Work Experience</h2>
+      <div className="space-y-8">
+        {experiences.map((exp, index) => (
+          <ExperienceItem key={index} {...exp} />
+        ))}
+      </div>
+    </section>
+  );
+}
