@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { FaRocket, FaFlask, FaCar, FaFilePdf, FaExpandAlt } from 'react-icons/fa';
 import { HiChip } from 'react-icons/hi';
 import { RiCodeSSlashFill } from 'react-icons/ri';
+import { getAssetPath } from '@/utils/paths';
 
 interface Project {
   title: string;
@@ -21,15 +22,15 @@ export default function Projects() {
   const graduateResearch: Project[] = [
     {
       title: "TorqMag: Novel Magnetic Attitude Control Integration (2nd Place, SmallSat Conference)",
-      coverImage: "/Portfolio/images/projects/torquemag-cover.jpg",
+      coverImage: "/images/projects/torquemag-cover.jpg",
       description: "Developed innovative dual-purpose magnetic torque rods that function as both attitude control actuators and AC magnetometry sensors. The system features μ-metal components and custom electronics for seamless mode-switching between control and sensing operations.",
       technologies: ["Magnetometry", "Control Systems", "Hardware Design", "Signal Processing"],
       icon: HiChip,
-      pdfUrl: "/Portfolio/pdfs/torquemag-paper.pdf"
+      pdfUrl: "/pdfs/torquemag-paper.pdf"
     },
     {
       title: "PCAC Data-Driven Autopilot System",
-      coverImage: "/Portfolio/images/projects/pcac-cover.jpg",
+      coverImage: "/images/projects/pcac-cover.jpg",
       description: "Implemented and validated a novel Predictive Cost Adaptive Control (PCAC) system for F16 and tailless aircraft, enabling robust flight control without relying on prior modeling or training. The system demonstrated exceptional performance in handling unpredictable flight dynamics through extensive simulation testing.",
       technologies: ["Adaptive Control", "Flight Dynamics", "System Identification", "Python/C/MATLAB"],
       icon: RiCodeSSlashFill
@@ -39,33 +40,33 @@ export default function Projects() {
   const projectWork: Project[] = [
     {
       title: "President of UGA Motorsports and Powertrain Design Team Lead",
-      coverImage: "/Portfolio/images/projects/motorsports-cover.jpg",
+      coverImage: "/images/projects/motorsports-cover.jpg",
       description: "Led a team of 50+ engineering students as President of the Formula SAE competition team, managing all aspects from design and manufacturing to competition. Spearheaded the powertrain development, including custom intake and exhaust manifolds, while maintaining relationships with industry partners.",
       technologies: ["Team Leadership", "Powertrain Design", "CAD/CAM", "Project Management", "Performance Testing"],
       icon: FaCar
     },
     {
       title: "Multi-Stage Launch Vehicle Design and Optimization",
-      coverImage: "/Portfolio/images/projects/launch-vehicle-cover.jpg",
+      coverImage: "/images/projects/launch-vehicle-cover.jpg",
       description: "Designed and optimized a three-stage lunar launch vehicle using LOX/CH₄ for lower stages and LOX/LH₂ for the upper stage. The final design achieved a 98m height and 1.2M kg mass configuration through comprehensive NASA CEA analysis.",
       technologies: ["Propulsion Systems", "NASA CEA", "Combustion Analysis", "Nozzle Design", "System Integration"],
       icon: FaRocket,
-      pdfUrl: "/Portfolio/pdfs/lunar-launch-vehicle.pdf"
+      pdfUrl: "/pdfs/lunar-launch-vehicle.pdf"
     },
     {
       title: "Conceptual Lunar PNT Architecture with Northrop Grumman Space Systems (SciTech 2026 Accepted)",
-      coverImage: "/Portfolio/images/projects/pnt-cover.jpg",
+      coverImage: "/images/projects/pnt-cover.jpg",
       description: "Developed a comprehensive Position, Navigation, and Timing (PNT) architecture for lunar and cis-lunar operations that achieves sub-meter accuracy and continuous South Pole coverage. Designed as a single-launch solution to minimize mission complexity while maintaining robust performance.",
       technologies: ["Orbital Mechanics", "Navigation Systems", "Space Systems Engineering", "STK Modeling"],
       icon: FaRocket
     },
     {
       title: "CFD Analysis of Turbulence Models in Propulsion Nozzles",
-      coverImage: "/Portfolio/images/projects/cfd-cover.jpg",
+      coverImage: "/images/projects/cfd-cover.jpg",
       description: "Conducted comprehensive analysis of k–ε, k–ω, and k–ω SST turbulence models against NASA DNS data for converging-diverging nozzle flows. Through systematic validation studies, developed best practices for turbulence modeling in propulsion applications.",
       technologies: ["ANSYS CFX", "Turbulence Modeling", "Computational Fluid Dynamics", "Flow Analysis", "DNS Validation"],
       icon: HiChip,
-      pdfUrl: "/Portfolio/pdfs/turbulence-models-cfd.pdf"
+      pdfUrl: "/pdfs/turbulence-models-cfd.pdf"
     }
   ];
 

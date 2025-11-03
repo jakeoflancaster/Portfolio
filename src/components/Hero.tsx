@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { RiFlaskLine, RiCrosshairFill, RiRoadsterLine, RiLightbulbFlashLine } from 'react-icons/ri';
 import { FaFilePdf } from 'react-icons/fa';
+import { getAssetPath } from '@/utils/paths';
 
 export default function Hero() {
   return (
@@ -63,7 +64,7 @@ export default function Hero() {
           >
             <div className="w-full h-full overflow-hidden rounded-lg border-2 border-accent/20">
               <img
-                src="/Portfolio/images/hero/engineering-symbol.jpg"
+                src={getAssetPath('/images/hero/engineering-symbol.jpg')}
                 alt="Engineering Symbol"
                 className="w-full h-full object-cover"
               />
@@ -79,7 +80,7 @@ export default function Hero() {
               Aerospace & Mechanical Engineering Professional
             </h2>
             <motion.a
-              href="/Portfolio/pdfs/resume.pdf"
+              href={getAssetPath('/pdfs/resume.pdf')}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-accent/20 bg-accent/10 text-accent hover:bg-accent/20 transition-all transform hover:scale-105"
@@ -100,7 +101,7 @@ export default function Hero() {
           >
             <div className="w-full h-full overflow-hidden rounded-lg border-2 border-accent/20">
               <img
-                src="/Portfolio/images/hero/aerospace-symbol.jpg"
+                src={getAssetPath('/images/hero/aerospace-symbol.jpg')}
                 alt="Aerospace Symbol"
                 className="w-full h-full object-cover"
               />
